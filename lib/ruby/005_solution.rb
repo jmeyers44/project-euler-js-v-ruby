@@ -2,7 +2,6 @@
 require 'benchmark'
 @answer = 0
 
-execution_time = Benchmark.realtime{ find_smallest_number}  
 
 def check_num(number)
   range = (1..19)
@@ -20,6 +19,8 @@ def find_smallest_number
   end
   @answer = number
 end
+
+execution_time = Benchmark.realtime{find_smallest_number}  
 
 puts "The answer is #{@answer}"
 puts "Execution Time: #{"%1.12f" % execution_time} seconds"
